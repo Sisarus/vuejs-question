@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kysymyksiä</title>
+  </head>
+
+  <body>
+    <div id="tell-me-animal" class="app">
+      <h1>{{title}}</h1>
+      <question-sheet></question-sheet>
+      <!--<div v-bind:class="{available: available}">luokka</div>
+      <button v-on:click="available = !available">Painike saatavilla</button>
+      <div v-bind:class="compClasses">
+        <p>Luokka2</p>
+        <p>Luokka2</p>
+      </div>
+    </div>-->
+    </div>
+
+    <script type="text/x-template" id="show-options-template">
+        <div class="options">
+          <h1><span class="title">{{ question }}</span></h1>
+          <img class="picture" :src="picture" alt="" />
+          <div>
+          <answer-sheet-item v-for="option in options" :name="option.answer"  v-bind:key="option.id"
+          :right="option.truth" @select="selectAnswer(option.answer, option.truth)"
+          v-bind:class="{answerRight: answeredRight && (option.truth == 'true'),
+          answerWrong: answeredFalse && (option.answer == selectedAnswer),
+          answerShow: answeredFalse && (option.truth == 'true')}"></answer-sheet-item>
+        <p v-if="answeredRight">Vastasit oikein!</p>
+        <p v-else-if="answeredFalse" >Vastasit väärin!</p>
+      </div>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="answer-sheet-item-template">
+        <button v-on:click="select">
+        <span class="title">
+          {{name}}
+        </span>
+      </button>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

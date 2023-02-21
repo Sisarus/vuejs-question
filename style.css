@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.app {
+  width: 500px;
+  height: 100vh;
+  margin: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1,
+h3 {
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+img {
+  margin-bottom: 1rem;
+}
+
+.picture {
+  width: 400px;
+  height: auto;
+}
+
+button {
+  padding: 1rem;
+  width: 100%;
+  margin: 5px;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 20px;
+  font-weight: 500;
+
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover {
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  background-color: #678b99;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.answerRight {
+  background-color: #89e077;
+  color: #193613;
+}
+
+.answerWrong {
+  background-color: #f08a7f;
+  color: #793b34;
+}
+
+.answerShow {
+  background-color: #77d9f7;
+  color: #254853;
+}
