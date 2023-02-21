@@ -74,5 +74,5 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     })
 
-    game.title = "Javascript toimii täällä :D"
+    game.title = "Arvaa eläin"
 });
